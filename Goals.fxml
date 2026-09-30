@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="GoalsController"
+            fitToWidth="true"
+            prefWidth="600.0"
+            prefHeight="700.0">
+
+    <content>
+
+        <VBox alignment="TOP_CENTER"
+              spacing="15.0"
+              prefWidth="560.0">
+
+            <padding>
+                <Insets top="35.0"
+                        right="40.0"
+                        bottom="35.0"
+                        left="40.0"/>
+            </padding>
+
+            <Label text="GOAL ACHIEVEMENT"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+            <Label fx:id="scoreLabel"
+                   text="⭐ Score: 0 XP"
+                   style="-fx-font-size: 20px;"/>
+
+            <Label text="🎯 YEAR GOAL"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+              
+              <Button text="SET YEAR GOAL"
+        fx:id="setYearGoalButton"
+        prefWidth="450.0"
+        prefHeight="45.0"
+        onAction="#handleSetYearGoal"/>
+
+            <Label fx:id="yearGoalLabel"
+                   text="No Year Goal"
+                   wrapText="true"
+                   style="-fx-font-size: 17px;"/>
+
+            <ProgressBar fx:id="yearProgressBar"
+                         prefWidth="450.0"
+                         progress="0.0"/>
+
+            <Label text="📅 MONTHLY GOAL"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <Label fx:id="monthlyGoalLabel"
+                   text="No Monthly Goal"
+                   wrapText="true"
+                   style="-fx-font-size: 17px;"/>
+
+            <ProgressBar fx:id="monthlyProgressBar"
+                         prefWidth="450.0"
+                         progress="0.0"/>
+
+            <Label text="🔥 HABITS"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <Label fx:id="habit1Label"
+                   text="Habit 1"
+                   style="-fx-font-size: 16px;"/>
+
+            <ProgressBar fx:id="habit1ProgressBar"
+                         prefWidth="450.0"
+                         progress="0.0"/>
+
+            <Label fx:id="habit1RateLabel"
+                   text="0%"
+                   style="-fx-font-size: 14px;"/>
+
+            <Label fx:id="habit2Label"
+                   text="Habit 2"
+                   style="-fx-font-size: 16px;"/>
+
+            <ProgressBar fx:id="habit2ProgressBar"
+                         prefWidth="450.0"
+                         progress="0.0"/>
+
+            <Label fx:id="habit2RateLabel"
+                   text="0%"
+                   style="-fx-font-size: 14px;"/>
+
+            <Label fx:id="habit3Label"
+                   text="Habit 3"
+                   style="-fx-font-size: 16px;"/>
+
+            <ProgressBar fx:id="habit3ProgressBar"
+                         prefWidth="450.0"
+                         progress="0.0"/>
+
+            <Label fx:id="habit3RateLabel"
+                   text="0%"
+                   style="-fx-font-size: 14px;"/>
+
+            <Button text="TODAY'S HABITS"
+                    fx:id="todayHabitsButton"
+                    prefWidth="450.0"
+                    prefHeight="45.0"
+                    onAction="#handleTodayHabits"/>
+
+            <Button text="EDIT MONTHLY GOAL"
+                    fx:id="editMonthlyGoalButton"
+                    prefWidth="450.0"
+                    prefHeight="45.0"
+                    onAction="#handleEditMonthlyGoal"/>
+
+            <Button text="CHECK MONTHLY GOAL"
+                    fx:id="checkMonthlyGoalButton"
+                    prefWidth="450.0"
+                    prefHeight="45.0"
+                    onAction="#handleCheckMonthlyGoal"/>
+              
+              <Button text="CHECK YEAR GOAL"
+        fx:id="checkYearGoalButton"
+        prefWidth="450.0"
+        prefHeight="45.0"
+        onAction="#handleCheckYearGoal"/>
+
+            <Button text="← Back"
+                    fx:id="backButton"
+                    prefWidth="450.0"
+                    prefHeight="45.0"
+                    onAction="#handleBack"/>
+
+        </VBox>
+
+    </content>
+
+</ScrollPane>

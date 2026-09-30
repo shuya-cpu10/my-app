@@ -1,0 +1,29 @@
+# Java
+*.class
+
+# VS Code
+.vscode/
+
+# Build / generated files
+target/
+build/
+out/
+
+# JavaFX / packaging output
+dist/
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+*.jar
+
+# WiX installer files
+*.wixobj
+*.wxs

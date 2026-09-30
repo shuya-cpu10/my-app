@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="HabitSetupController"
+      alignment="TOP_CENTER"
+      spacing="20.0"
+      prefWidth="600.0"
+      prefHeight="700.0">
+
+    <padding>
+        <Insets top="50.0"
+                right="50.0"
+                bottom="50.0"
+                left="50.0"/>
+    </padding>
+
+    <Label text="SET YOUR HABITS"
+           style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+
+    <Label text="Choose 3 habits you want to build."
+           style="-fx-font-size: 16px;"/>
+
+    <TextField fx:id="habit1Field"
+               promptText="Habit 1"
+               prefWidth="450.0"
+               prefHeight="45.0"/>
+
+    <TextField fx:id="habit2Field"
+               promptText="Habit 2"
+               prefWidth="450.0"
+               prefHeight="45.0"/>
+
+    <TextField fx:id="habit3Field"
+               promptText="Habit 3"
+               prefWidth="450.0"
+               prefHeight="45.0"/>
+
+    <Button text="SAVE HABITS"
+            fx:id="saveButton"
+            prefWidth="450.0"
+            prefHeight="50.0"
+            onAction="#handleSave"/>
+
+</VBox>

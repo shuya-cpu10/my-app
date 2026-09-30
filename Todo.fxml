@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="TodoController"
+      alignment="TOP_CENTER"
+      spacing="10.0"
+      prefWidth="600.0"
+      prefHeight="700.0">
+
+    <padding>
+        <Insets top="25.0" right="40.0" bottom="25.0" left="40.0"/>
+    </padding>
+
+    <Label text="TODO"
+           style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+
+    <Label text="My Tasks"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <ListView fx:id="todoList"
+              prefWidth="500.0"
+              prefHeight="180.0"/>
+
+    <Button text="✓ Complete Todo"
+            fx:id="completeTodoButton"
+            prefWidth="500.0"
+            prefHeight="45.0"
+            onAction="#handleCompleteTodo"/>
+
+    <TextField fx:id="titleField"
+               promptText="Enter a Todo"
+               prefWidth="500.0"
+               prefHeight="45.0"/>
+
+    <Label text="Due Date"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox alignment="CENTER" spacing="10.0">
+
+        <ScrollPane fx:id="monthScroll"
+                    prefWidth="100.0"
+                    prefHeight="100.0"/>
+
+        <Label text="/"/>
+
+        <ScrollPane fx:id="dayScroll"
+                    prefWidth="100.0"
+                    prefHeight="100.0"/>
+
+    </HBox>
+
+    <Label text="Due Time"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox alignment="CENTER" spacing="10.0">
+
+        <ScrollPane fx:id="hourScroll"
+                    prefWidth="100.0"
+                    prefHeight="100.0"/>
+
+        <Label text=":"/>
+
+        <ScrollPane fx:id="minuteScroll"
+                    prefWidth="100.0"
+                    prefHeight="100.0"/>
+
+    </HBox>
+
+    <Button text="+ Add Todo"
+            fx:id="addTodoButton"
+            prefWidth="500.0"
+            prefHeight="50.0"
+            onAction="#handleAddTodo"/>
+
+    <Button text="← Back"
+            fx:id="backButton"
+            prefWidth="500.0"
+            prefHeight="40.0"
+            onAction="#handleBack"/>
+
+</VBox>

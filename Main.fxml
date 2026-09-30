@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="MainController"
+      alignment="TOP_CENTER"
+      spacing="25"
+      prefWidth="600"
+      prefHeight="700"
+      styleClass="main-background">
+
+    <padding>
+        <Insets top="45" right="45" bottom="45" left="45"/>
+    </padding>
+
+    <VBox alignment="CENTER" spacing="5">
+        <Label text="GOAL ACHIEVEMENT"
+               styleClass="title-label"/>
+
+        <Label text="Build your goals. Build yourself."
+               styleClass="subtitle-label"/>
+    </VBox>
+
+    <VBox alignment="CENTER"
+          spacing="5"
+          prefWidth="480"
+          prefHeight="120"
+          styleClass="score-card">
+
+        <Label text="⭐ SCORE"
+               styleClass="score-title"/>
+
+        <Label fx:id="scoreLabel"
+               text="0 XP"
+               styleClass="score-value"/>
+    </VBox>
+
+    <Label text="WHAT DO YOU WANT TO DO?"
+           styleClass="section-label"/>
+
+    <HBox spacing="15"
+          alignment="CENTER">
+
+        <Button fx:id="todoButton"
+                text="📝  TODO"
+                onAction="#handleTodo"
+                prefWidth="150"
+                prefHeight="70"
+                styleClass="menu-button"/>
+
+        <Button fx:id="goalsButton"
+                text="🎯  GOALS"
+                onAction="#handleGoals"
+                prefWidth="150"
+                prefHeight="70"
+                styleClass="menu-button"/>
+    </HBox>
+
+    <Button fx:id="statisticsButton"
+        text="📊  STATISTICS"
+        onAction="#handleStatistics"
+        prefWidth="315"
+        prefHeight="70"
+        styleClass="menu-button"/>
+
+</VBox>
